@@ -15,7 +15,10 @@ module JKRegister(input J,K,CLK,LOAD,IN,output reg Q);
            end
     end
 endmodule
-module Counter#(parameter WIDTH=5)(input CLK,UP_DOWN,RESET,output [4:0] Q);
+module JKCombination#(parameter INPUTS=0)(input [INPUTS-1:0]Q,UP_DOWN,output JK);
+assign JK = ((~|(Q)&~UP_DOWN) | (&(Q)&UP_DOWN));
+endmodule
+module Counter#(parameter WIDTH=5)(input CLK,UP_DOWN,RESET,output [(WIDTH-1):0] Q);
   //UP_DOWN = (UP:1 , DOWN:0)
   wire [WIDTH-1:0] JK;
   wire [WIDTH-1:0]IN = {(WIDTH){~UP_DOWN}};//Reset Value
@@ -29,13 +32,15 @@ module Counter#(parameter WIDTH=5)(input CLK,UP_DOWN,RESET,output [4:0] Q);
   generate 
 //Generates Combination Circuit [Inputs: Q[REGISTER_POINTER-1], UP_DOWN, OUTPUT: REGISTER INPUT(JK)]
     for(REGISTER_POINTER=1;REGISTER_POINTER<(WIDTH);REGISTER_POINTER=REGISTER_POINTER+1)begin
-    assign JK[REGISTER_POINTER] = ((~|(Q[REGISTER_POINTER-1:0])&~UP_DOWN) | (&(Q[REGISTER_POINTER-1:0])&UP_DOWN));//using and gate for up counter and nor for down counter
+    //using and gate for up counter and nor for down counter
+    //[REGISTER_POINTER-1:0]
+    JKCombination#(.INPUTS(REGISTER_POINTER)) jk (Q[REGISTER_POINTER-1:0],UP_DOWN,JK[REGISTER_POINTER]);
     end
   endgenerate
   generate
 //Generate JK Register Blocks [Inputs: JK[REGISTER_POINTER], CLK, RST, IN, OUTPUT: COUNTER]
     for(REGISTER_POINTER=0;REGISTER_POINTER<(WIDTH);REGISTER_POINTER=REGISTER_POINTER+1)begin
-      JKRegister R(JK[REGISTER_POINTER],JK[REGISTER_POINTER],CLK,RESET,IN,Q[REGISTER_POINTER]);
+      JKRegister R(.J(JK[REGISTER_POINTER]),.K(JK[REGISTER_POINTER]),.CLK(CLK),.LOAD(RESET),.IN(IN),.Q(Q[REGISTER_POINTER]));
     end
   endgenerate
   
