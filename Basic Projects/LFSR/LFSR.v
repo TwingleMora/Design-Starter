@@ -69,14 +69,4 @@ module LFSR (
       OUT <= OUT_Comb;
      end
  end
-function [3:0] new_feature(input [3:0] x);
-begin
-new_feature = x+3;
-end
-endfunction
-function [3:0] new_feature2(input [3:0] x);
-begin
-new_feature2 = x+3;
-end
-endfunction
 endmodule
