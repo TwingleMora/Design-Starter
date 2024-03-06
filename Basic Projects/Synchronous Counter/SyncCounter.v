@@ -1,4 +1,30 @@
 // Write your modules here!
+/*module SRLatch (input S,R,CLK,LOAD,IN,output q,qbar);
+//wire q,qbar,en;
+  wire INB,LOADB;
+ not(INB,IN);
+ not(LOADB,LOAD);
+wire se,re;
+  wire sl,rl;
+  wire ss,rr;
+  and(se,S,CLK,LOADB);
+  and(re,R,CLK,LOADB);
+  and(sl,LOAD,IN);
+  and(rl,LOAD,INB);
+  or(ss,se,sl);
+  or(rr,re,rl);
+  nor(q,qbar,rr);
+  nor(qbar,q,ss);
+endmodule
+module SRRegister (input S,R,CLK,LOAD,IN,output Q,QBar);
+wire CLKB;
+wire x,y;
+wire Q1,QBar1;
+not(CLKB,CLK);
+SRLatch L1(S,R,CLKB,0,y,Q1,QBar1);//LOAD Here MUST BE Zero To Decide Which Side To Take(Sync or Async)
+SRLatch L2(Q1,QBar1,CLK,LOAD,IN,Q,QBar);
+
+endmodule*/
 module JKRegister(input J,K,CLK,LOAD,IN,output reg Q);
   always@(posedge CLK or negedge LOAD)
     begin
@@ -14,6 +40,13 @@ module JKRegister(input J,K,CLK,LOAD,IN,output reg Q);
               Q<=0;
            end
     end
+           /*
+    wire LOADB;
+    not(LOADB,LOAD);
+    wire jj,kk;
+    assign jj =(J&~Q)|J&~K;
+    assign kk=(K&J&~qbar);
+    SRRegister sr (jj,kk,CLK,LOADB,IN,Q,qbar);*/
 endmodule
 module JKCombination#(parameter INPUTS=0)(input [INPUTS-1:0]Q,UP_DOWN,output JK);
 assign JK = ((~|(Q)&~UP_DOWN) | (&(Q)&UP_DOWN));
