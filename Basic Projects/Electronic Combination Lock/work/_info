@@ -1,0 +1,65 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\Portfolio\Assignments\LFSR
+vECL_TB
+!i10b 1
+!s100 QZA[Z?YD=Pkm34h9KWe0M3
+IdGFPPIb@TKo57:b@M=0Wj2
+Z1 VmNIRRF6d?Y>XmIA;jZJk?0
+Z2 dE:\Portfolio\Mini Projects1\Electronic Combination Lock
+w1709535917
+Z3 8E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECL_TB.v
+Z4 FE:\Portfolio\Mini Projects1\Electronic Combination Lock\ECL_TB.v
+L0 1
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1709535923.434000
+!s107 E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECL_TB.v|
+Z6 !s90 -reportprogress|300|-work|work|E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECL_TB.v|
+!s101 -O0
+Z7 o-work work -O0
+Z8 n@e@c@l_@t@b
+vECLMealy
+Z9 !s100 0OY4b=`NIjZMP`@<1kQ^]1
+Z10 IF5>TIDzS7T:24HI[XFjQQ3
+Z11 V6el49`l2W3:b7L:XS@CYh3
+R2
+Z12 w1709535857
+Z13 8E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMealy.v
+Z14 FE:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMealy.v
+L0 1
+R5
+r1
+31
+Z15 !s90 -reportprogress|300|-work|work|E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMealy.v|
+R7
+Z16 n@e@c@l@mealy
+!i10b 1
+!s85 0
+Z17 !s108 1709535923.384000
+Z18 !s107 E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMealy.v|
+!s101 -O0
+vECLMoore
+Z19 !s100 ?Y8T?CHm3@0GScz1FQOFW0
+Z20 ISkTN`Tfa_z[Q0<Y?gC5dG1
+Z21 VdV:M0m=TzRhJULlN?6GnL0
+R2
+Z22 w1709533880
+Z23 8E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMoore.v
+Z24 FE:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMoore.v
+L0 1
+R5
+r1
+31
+Z25 !s90 -reportprogress|300|-work|work|E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMoore.v|
+R7
+Z26 n@e@c@l@moore
+Z27 !s108 1709535923.294000
+Z28 !s107 E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMoore.v|
+!i10b 1
+!s85 0
+!s101 -O0

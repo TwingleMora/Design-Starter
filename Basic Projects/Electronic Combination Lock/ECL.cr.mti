@@ -1,0 +1,15 @@
+{E:/Portfolio/Mini Projects1/Electronic Combination Lock/ECLMealy.v} {1 {vlog -work work {E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMealy.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ECLMealy
+
+Top level modules:
+	ECLMealy
+
+} {} {}} {E:/Portfolio/Mini Projects1/Electronic Combination Lock/ECLMoore.v} {1 {vlog -work work {E:\Portfolio\Mini Projects1\Electronic Combination Lock\ECLMoore.v}
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ECLMoore
+
+Top level modules:
+	ECLMoore
+
+} {} {}}
