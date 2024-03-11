@@ -18,11 +18,11 @@ always@(*)
   
   if(Load)
     Counter_D = IN;
-  else if(Down  &&  !Low)
+  else if(Down  &&  !Low)// until it's Down && Low = 1
     Counter_D = Counter - 1;
-  else if(Up  &&  !High  &&  !Down)
+  else if(Up  &&  !High  &&  !Down)// so at 0 this will work if i dont put !Down
     Counter_D = Counter + 1;
-  else 
+  else //if(!(DOWN&&!LOW)&&!(UP&&!HIGH&&!DOWN)) if[(DOWN*LOWBar)Bar * (UP*HIGHBar*DOWNBar)Bar ] 
     Counter_D = Counter;    
   
   
