@@ -263,7 +263,7 @@ integer ferror;
             //if(!failed)
             //begin
             $display("\n");
-            $display("rx_output is: %b, rx_input: %b",rx_output,dataInput_tb);
+            $display("rx_output is: %b, tx_input: %b",rx_output,dataInput_tb);
             
             display_baudrate;
             $display("*************** Test %0d Passed *************",testnumber);
@@ -287,7 +287,7 @@ integer ferror;
             end
             if(ferror)
             $display("*************** Framing Error ***************");
-            $display("***** rx_output is: %b, rx_input: %b *****",rx_output,dataInput_tb);
+            $display("***** rx_output is: %b, tx_input: %b *****",rx_output,dataInput_tb);
             DisplayTestError(testnumber);
             tested=1;
             $display("\n\n");
