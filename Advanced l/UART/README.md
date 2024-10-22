@@ -1,1 +1,1 @@
-UART Trasmitter
+UART Transmitter
