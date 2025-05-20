@@ -1,6 +1,6 @@
 module AFIFO #(parameter ADDRWIDTH=3,WIDTH=4,DEPTH=8) (
     input clk1,clk2, rst1,rst2,wrEn,rdEn,
-    input [WIDTH-1:0]wrIn,
+    input      [WIDTH-1:0]wrIn,
     output reg [WIDTH-1:0]rdOut,
     output reg full,empty,
     output reg [ADDRWIDTH:0] rdPtr,wrPtr,
@@ -30,8 +30,8 @@ endfunction
     always @(posedge clk1 or negedge rst1) begin
         if(!rst1)
         begin
-            wrPtr<=0;
-            full<=0;
+            wrPtr<=0;                       
+            full<=0;                        
             syncGRdPtr1<=binaryToGrey(rdPtr);
             syncGRdPtr2<=binaryToGrey(rdPtr);
 
