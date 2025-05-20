@@ -1,7 +1,0 @@
-FIFO.sv
-FIFO_coverage.sv
-FIFO_IF.sv
-FIFO_scoreboard.sv
-FIFO_transaction.sv
-monitor.sv
-tb.sv
