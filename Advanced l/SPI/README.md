@@ -1,5 +1,7 @@
 # SPI Master and Slave in SystemVerilog
 
+**[View the full SPI documentation on Canva](https://canva.link/spi-part-one)**
+
 **Author: Amr El Kamash**
 
 A hardware implementation of SPI master and slave cores with support for all four SPI modes, selectable bit order, and an 8-bit application interface. The master generates the serial clock and chip-select signals, while the slave follows the externally supplied clock and selection signals.
